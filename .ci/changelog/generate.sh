@@ -141,6 +141,7 @@ win_field() {
 
 	printf "| %s | " "$pretty_arch"
 	file_link "Standard zip" "Windows-${ARTIFACT_REF}-${arch}-${compiler}-standard.zip"
+	printf " | "
 
 	if tagged && opts; then
 		file_link "PGO zip" "Windows-${ARTIFACT_REF}-${arch}-clang-pgo.AppImage"
@@ -152,7 +153,7 @@ win_field() {
 win_matrix() {
 	msvc_field
 	win_field amd64 "amd64/x86_64 v3" "Built with MinGW. Requires Ryzen, 4th gen Intel, or newer"
-	win_field rog-ally "Zen 4" "Requires Zen 4 or newer. Incompatible with Intel"
+	win_field rog-ally "Zen 4" "Requires Zen 4 or newer (e.g. ROG Ally X, Legion Go S). Incompatible with Intel"
 	win_field arm64 "aarch64/arm64" "Snapdragon devices"
 }
 
