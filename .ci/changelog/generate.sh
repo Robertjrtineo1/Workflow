@@ -128,13 +128,6 @@ msvc_field() {
 	echo " | Use if you encounter graphical issues on other builds (e.g. Pokemon Scarlet & Violet) |"
 }
 
-cat <<EOF
-Desc, Standard, PGO, notes
-amd64-v3, amd64-gcc-standard, amd64-clang-pgo, Requires 4th generation Intel, Ryzen, or newer
-Zen 4, rog-ally-gcc-standard, rog-ally-clang-pgo, Requires Zen 4 or newer (e.g. ROG Ally X, Legion Go S)
-aarch64/arm64, arm64-clang-standard, arm64-clang-pgo, Snapdragon devices
-EOF
-
 win_field() {
 	arch="$1"
 	pretty_arch="$2"
